@@ -7,9 +7,9 @@ export default function Menu(){
             <ul>
                 <li> <Link href="/">Home</Link> </li>
                 <li> <Link href="/paginaMapa">Mapa</Link> </li>
-                <li> <Link href="/paginaNotificacoes">Notificacoes</Link> </li>
+                <li> <Link href="/paginaNotificacoes">Notificações</Link> </li>
                 <li> <Link href="/paginaQuiz">Quiz</Link> </li>
-                <li> <Link href="/paginaDenuncias">Denuncias</Link> </li>
+                <li> <Link href="/paginaDenuncias">Denúncias</Link> </li>
             </ul>
         </nav>
     );
