@@ -1,12 +1,17 @@
 import Link from "next/link";
-import Menu from "../components/menu";
+import Style from "./page.module.css";
+
 
 export default function Notificacoes(){
     return (
         <>
-            <Menu/>
-            <h1>Notificações</h1>
-            <Link href="/">Voltar</Link>
+            <header className={Style.notificacoes}>
+                <h1>Notificações</h1>
+            </header>
+            
+            <nav className={Style.voltar}>
+                <Link href="/">Voltar</Link>
+            </nav>
         </>
     );
 }
