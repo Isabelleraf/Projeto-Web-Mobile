@@ -1,11 +1,13 @@
 import Link from "next/link";
-import Menu from "../components/menu";
+import Style from "./page.module.css";
 
 export default function Denuncias(){
     return (
-        <>
-            <Menu/>
-            <h1>Denúncias</h1>
+        <>  
+            <header className={Style.denuncias}>
+                <h1>Denúncias</h1>
+            </header>  
+
             <Link href="/">Voltar</Link>
         </>
     );
