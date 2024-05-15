@@ -3,4 +3,32 @@
     color: #DC0D30;
     padding: 15px;
     font-size: 20px;
+    text-align: center;
+}
+
+.notificacao {
+    background-color: #D9D9D9;
+    padding:10px;
+    position: relative;
+    width: (100vw - 1.5rem);
+    margin:2rem;
+    border-radius: 10px;
+    /* background-image: ; */
+}
+
+.botoes {
+    display: flex;
+    align-items: center;
+}
+
+
+.voltar {
+    text-decoration: none;
+    background-color: #D9D9D9;
+    color:#DC0D30;
+    padding: 5px 10px;
+    width: 50px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
 }
