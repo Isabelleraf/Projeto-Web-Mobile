@@ -5,7 +5,6 @@ export default function Menu(){
     return(
         <nav className={Style.menu}>
             <ul>
-                <li> <Link href="/">Home</Link> </li>
                 <li> <Link href="/paginaMapa">Mapa</Link> </li>
                 <li> <Link href="/paginaNotificacoes">Notificações</Link> </li>
                 <li> <Link href="/paginaQuiz">Quiz</Link> </li>
