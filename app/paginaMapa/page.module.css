@@ -3,4 +3,23 @@
     color: #DC0D30;
     padding: 15px;
     font-size: 20px;
+    text-align: center;
+}
+
+.botoes {
+    display: flex;
+    align-items: center;
+}
+
+.botaoVoltar {
+    position: relative;
+    float:left;
+    text-decoration: none;
+    background-color: gray;
+    color:#DC0D30;
+    padding: 5px 10px;
+    width: 50px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border-radius: 10px;
 }
