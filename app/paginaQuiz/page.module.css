@@ -11,6 +11,7 @@
 }
 
 .botaoQuiz {
+    margin-top: 20px;
     background-color: black;
     padding: 10px;
     border-radius: 20px;
@@ -34,9 +35,14 @@
     margin-left: 10px;
     border-radius: 10px;
 }
-
+/* 
 .quizDiv {
     display: flex;
     align-items: flex-end;
-    /* align-items: center; */
+} */
+
+.quizDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
