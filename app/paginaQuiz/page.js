@@ -2,10 +2,13 @@
 
 import Link from "next/link";
 import Style from "./page.module.css";
-import {useState} from 'react'
+import {useState, useEffect} from 'react'
+import { useRouter } from 'next/navigation';
 
 
 export default function Quiz(){
+    const router = useRouter();
+
     let perguntas = {
         0 : {
             title: "1- Qual a principal causa de acidentes de trânsito no Brasil?",
@@ -50,7 +53,17 @@ export default function Quiz(){
         setSelectedAnswer(index);
     }
 
+    useEffect(() => {
+        if (Message === "Teste Concluido!") {
+            setTimeout(() => {
+                router.push('/');
+            }, 1000);
+        }
+    }, [Message, router]);
+
+
     function avancarPergunta() {
+
         const perguntaAtual = perguntas[currentQuestion];
         if (perguntaAtual.respostaCorreta.toString() === perguntas[currentQuestion].respostas[selectedAnswer].toString()) {
             setShowMessage(true);
@@ -61,7 +74,8 @@ export default function Quiz(){
 
                 (() => {
                     if (currentQuestion >= Object.entries(perguntas).length -1 ) {
-                        
+                        setShowMessage(true);
+                        setMessage("Teste Concluido!")
                         return console.log("maximo!")
                     }
                     setCurrentQuestion(prevIndex => prevIndex + 1);
@@ -95,15 +109,17 @@ export default function Quiz(){
                         <p>{pergunta.title}</p>
                         {Object.entries(pergunta.respostas).map(([inx, res], idx) =>{
                             return (
-                                <label key={inx}>
-                                    <input
-                                        type="checkbox"
-                                        checked={selectedAnswer === inx}
-                                        onChange={() => handleCheckboxChange(inx)}
-                                        disabled={showMessage} 
-                                    />
-                                    {res}
-                                </label>
+                                <div key={inx}>
+                                    <label>
+                                        <input
+                                            type="checkbox"
+                                            checked={selectedAnswer === inx}
+                                            onChange={() => handleCheckboxChange(inx)}
+                                            disabled={showMessage} 
+                                        />
+                                        {res}
+                                    </label>
+                                </div>
                             )
                         })}
                     </div>
